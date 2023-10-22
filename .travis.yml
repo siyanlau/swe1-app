@@ -27,3 +27,6 @@ deploy:
   app: "django-tutorial"
   env: "django-env"
   bucket_name: "elasticbeanstalk-us-west-2-891537165702"
+
+after_success:
+  - coveralls
