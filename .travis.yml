@@ -10,7 +10,10 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - true
+  - black --check .
+  - flake8
+  - coverage run manage.py test
+  - coverage report
 
 install:
   - pip install django
