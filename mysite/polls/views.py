@@ -4,7 +4,6 @@ from django.urls import reverse
 from django.views import generic
 
 from .models import Choice, Question
-from django.utils import timezone
 
 
 # Create your views here.
