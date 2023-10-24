@@ -13,8 +13,11 @@ script:
   - coverage report
 
 install:
-  - pip install -r requirements.txt
-# cleaned up this section
+  - pip install django
+  - pip install black
+  - pip install flake8
+  - pip install coverage
+  - pip install coveralls
 
 deploy:
   provider: elasticbeanstalk
