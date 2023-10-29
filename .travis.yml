@@ -10,7 +10,7 @@ script:
   - black --check .
   - flake8
   - coverage run manage.py test
-  - coverage report
+  - coverage report --repo-token=okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI
 
 install:
   - pip install django
@@ -18,6 +18,8 @@ install:
   - pip install flake8
   - pip install coverage
   - pip install coveralls
+
+repo_token: okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI
 
 deploy:
   provider: elasticbeanstalk
