@@ -10,7 +10,6 @@ script:
   - black --check .
   - flake8
   - coverage run manage.py test
-  - coverage report --repo-token=okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI
 
 install:
   - pip install django
@@ -19,7 +18,7 @@ install:
   - pip install coverage
   - pip install coveralls
 
-repo_token: okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI
+# repo_token: okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI
 
 deploy:
   provider: elasticbeanstalk
@@ -31,4 +30,6 @@ deploy:
   bucket_name: "elasticbeanstalk-us-west-2-891537165702"
 
 after_success:
+  - coverage report
+  - pip install coveralls
   - coveralls
