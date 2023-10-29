@@ -21,9 +21,8 @@ script:
   - flake8
   - coverage run manage.py test
   - coverage xml
+  - ./tools/coveralls report --repo-token=okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI ./coverage.xml
 
-
-# repo_token: okYJYOMk5H4Qp3jMtETpVnYcKGHaFYwGI
 
 deploy:
   provider: elasticbeanstalk
